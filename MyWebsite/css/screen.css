@@ -71,7 +71,9 @@ header {
 }
 
 header a.logo {
-    position: absolute; display: block;
+    z-index: 1;
+    position: absolute; 
+    display: block;
     width: 160px; height: 66px;
     background: url(../images/logo.svg) no-repeat 0 0; background-size: contain;
     top: 15px; left: 20px;
@@ -202,4 +204,96 @@ section.how-to blockquote p.credit::before {
     left: 0;
 }
 
+/* Navigation */
+
+nav {
+    background-color: rgba(0, 0, 0, .65);
+    position: absolute;
+    top: 0px; left: 0px;
+    padding: 50px 0 0 0;
+    width: 100%;
+}
+
+nav::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0; padding: 0;
+}
+
+nav ul li:hover { background-color: orange; }
+nav ul li:hover > ul { display: block; } /* Shows the hidden tabs */
+
+nav ul li a{
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 125px;
+    position: relative;
+}
+
+nav ul li a:visited { color: white; }
+
+nav ul li a:hover { background-color: blue; }
+
+nav ul ul { 
+    position: absolute;
+    top: 100%;
+    background-color: #2b0306;
+    display: none; /* Hide the other nav tabs */
+}
+
+nav ul ul li { position: relative; }
+
+nav ul ul ul { left: 100%; top: 0px; }
+
+/* top-level */
+
+nav > ul { padding-left: 200px; }
+
+nav > ul > li { float: left; }
+
+nav > ul > li > a { width: auto; padding: 10px 20px 15px 20px; }
+
+nav a[aria-haspopup="true"]::after {
+    content: '';
+    display: block;
+    width: 0; height: 0;
+    position: absolute;
+    top: 16px; right: 15px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid white;
+}
+
+nav > ul > li > a[aria-haspopup="true"]::after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid white;
+    left: 20px; right: auto;
+    bottom: 6px; top: auto;
+}
+
 /* Footer */
+
+footer {
+    font-size: .8em;
+    margin: 40px;
+    color: #999;
+}
+
+footer .content { display: inline; }
+
+footer a {
+    margin-left: 30px;
+    color: #777;
+}
+
+footer a:visited { color: #777; }
+footer a:hover { color: #000; }
+
