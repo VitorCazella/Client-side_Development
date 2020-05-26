@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300;
+    color: #555;
+    margin: 0; padding: 0;
+}
+
+#page {
+    margin: 0 auto;
+    position: relative;
+}
+
+h1 {
+    margin: 0 0 1em 0;
+    font-size: 2.8em; font-weight: 700;
+}
+
+h2 {
+    margin: 0 0 .5em 0;
+    font-size: 1.6em; font-weight: 700;
+    line-height: 1.1em;
+}
+
+h3 {
+    margin: 0 0 .5em 0;
+    font-size: 1.3em; font-weight: 700;
+}
+
+h4 {
+    margin: 0 0 1.5em 0;
+    font-size: 1em; font-weight: 700;
+}
+
+/* Header */
+
+header { 
+    color: white;
+    background-color: rgba(0, 0, 0, .65); 
+    padding-top: 50px;
+    padding-bottom: 0.5px;
+    text-align: center;
+}
+
+/* Navigation */
+
+nav {
+    background-color: rgba(0, 0, 0, .65);
+    position: sticky;
+    top: 0px; left: 0px;
+    padding: 0;
+    width: 100%;
+}
+
+nav::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0; padding: 0;
+}
+
+nav ul li:hover { background-color: orange; }
+nav ul li:hover > ul { display: block; } /* Shows the hidden tabs */
+
+nav ul li a{
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 125px;
+    position: relative;
+}
+
+nav ul li a:visited { color: white; }
+
+nav ul li a:hover { background-color: blue; }
+
+nav ul ul { 
+    position: absolute;
+    top: 100%;
+    background-color: #2b0306;
+    display: none; /* Hide the other nav tabs */
+}
+
+nav ul ul li { position: relative; }
+
+nav ul ul ul { left: 100%; top: 0px; }
+
+/* top-level */
+
+nav > ul > li { float: left; }
+
+nav > ul > li > a { width: auto; padding: 10px 20px 15px 20px; }
+
+nav a[aria-haspopup="true"]::after {
+    content: '';
+    display: block;
+    width: 0; height: 0;
+    position: absolute;
+    top: 16px; right: 15px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid white;
+}
+
+nav > ul > li > a[aria-haspopup="true"]::after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid white;
+    left: 20px; right: auto;
+    bottom: 6px; top: auto;
+}
+
+/* Section - All */
+section { padding: 0 30px; }
+section::after { content: ''; display:block; clear: both; }
+
+/* Section - Main */
+
+section.main {
+    margin-top: 20px; margin-bottom: 30px; padding: 0;
+    height: 1000px;
+}
+
+/* Footer */
+
+footer {
+    font-size: .8em;
+    margin: 40px;
+    color: #999;
+}
+
+footer .content { display: inline; }
+
+footer a {
+    margin-left: 30px;
+    color: #777;
+}
+
+footer a:visited { color: #777; }
+footer a:hover { color: #000; }
