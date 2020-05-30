@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Projects Hub</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Vitor Antunes Cazella">
+    <!-- <link rel="stylesheet" type="text/css"  media="screen" href="../debug.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+        * {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300;
+            background-color: rgb(111, 175, 224);
+            height: 100%;
+        }
+
+        header {
+            padding: 1em;
+            background-color: rgba(0, 0, 0, .20);
+            text-align: center;
+        }
+
+        div#js {
+            margin: 30px;
+            height: 85vh;
+        }
+
+        div#js a {
+            margin: 30px;
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Pages Hub</h1>
+    </header>
+
+    <div id="js"></div>
+
+    <footer>
+        <div class="content">
+            &copy; Vitor A. Cazella
+            <a title="Privacy Policy" href="#">Privacy Policy</a>
+            <a title="Terms of sevice" href="#">Terms of sevice</a>
+        </div>
+    </footer>
+
+</body>
+<script>
+    var links_array = ["Cazella_WebDevelopment/index.html", "MyWebsite/index.html"];
+
+    for (i = 0; i < links_array.length; i++) {
+        var bold = document.createElement("b");
+        var ancor = document.createElement("a");
+        bold.appendChild(ancor);
+        var node = document.createTextNode("Page "+ i + 1);
+        ancor.appendChild(node);
+        ancor.href = links_array[i];
+
+
+        var br = document.createElement("br");
+
+        var element = document.getElementById("js");
+        element.append(ancor, br);
+    }
+</script>
+
+</html>
