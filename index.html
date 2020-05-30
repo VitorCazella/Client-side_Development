@@ -26,18 +26,34 @@
             padding: 1em;
             background-color: rgba(0, 0, 0, .20);
             text-align: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
         }
 
-        div#js {
-            margin: 30px;
+        #js {
+            margin: 30px; padding: 3em;            
             height: 85vh;
         }
+        #js ul {
+            padding: 20px;
+            list-style: none;
+        }
 
-        div#js a {
-            margin: 30px;
-            font-size: 20px;
-            text-decoration: none;
+        #js ul li {
+            padding: 20px;
+            max-width: 15em;
+            border: solid black;
+            border-radius: 0.4em;
+            text-align: center;
+        }
+
+        #js ul li a{
             color: black;
+            text-decoration: none;
+        }
+
+        #js li:hover {
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         footer {
@@ -66,18 +82,19 @@
     var links_array = ["Cazella_WebDevelopment/index.html", "MyWebsite/index.html"];
 
     for (i = 0; i < links_array.length; i++) {
-        var bold = document.createElement("b");
+        var ul = document.createElement("ul");
+        var li = document.createElement("li");
+        ul.appendChild(li);
+
         var ancor = document.createElement("a");
-        bold.appendChild(ancor);
-        var node = document.createTextNode("Page "+ i + 1);
-        ancor.appendChild(node);
         ancor.href = links_array[i];
+        li.appendChild(ancor)
 
-
-        var br = document.createElement("br");
+        var node = document.createTextNode("Page "+ parseInt(i + 1));
+        ancor.appendChild(node);
 
         var element = document.getElementById("js");
-        element.append(ancor, br);
+        element.append(ul);
     }
 </script>
 
