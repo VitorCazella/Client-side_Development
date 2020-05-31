@@ -17,23 +17,23 @@
         }
 
         body {
-            font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300;
-            background-color: rgb(111, 175, 224);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
             height: 100%;
         }
 
         header {
             padding: 1em;
-            background-color: rgba(0, 0, 0, .20);
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
         }
 
         #js {
-            margin: 30px; padding: 3em;            
+            margin: 20px;
+            padding: 3em;
             height: 85vh;
         }
+
         #js ul {
             padding: 20px;
             list-style: none;
@@ -45,15 +45,18 @@
             border: solid black;
             border-radius: 0.4em;
             text-align: center;
+            overflow: hidden;
+            min-width: 150px;
         }
 
-        #js ul li a{
+        #js ul li a {
             color: black;
+            font-weight: bold;
             text-decoration: none;
         }
 
         #js li:hover {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.15);
         }
 
         footer {
@@ -64,7 +67,7 @@
 
 <body>
     <header>
-        <h1>Pages Hub</h1>
+        <h1>Pages Hub</h1><br><br><hr>
     </header>
 
     <div id="js"></div>
@@ -80,6 +83,7 @@
 </body>
 <script>
     var links_array = ["Cazella_WebDevelopment/index.html", "MyWebsite/index.html"];
+    var name_array = ["Cazella WebDevelopment", "MyWebsite"];
 
     for (i = 0; i < links_array.length; i++) {
         var ul = document.createElement("ul");
@@ -90,7 +94,7 @@
         ancor.href = links_array[i];
         li.appendChild(ancor)
 
-        var node = document.createTextNode("Page "+ parseInt(i + 1));
+        var node = document.createTextNode(name_array[i]);
         ancor.appendChild(node);
 
         var element = document.getElementById("js");
