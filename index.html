@@ -5,7 +5,7 @@
     <title>Projects Hub</title>
     <meta charset="UTF-8" />
     <meta name="author" content="Vitor Antunes Cazella">
-    <!-- <link rel="stylesheet" type="text/css"  media="screen" href="../debug.css"> -->
+    <link rel="stylesheet" type="text/css"  media="screen" href="debug.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 
@@ -18,7 +18,7 @@
 
         body {
             font-family: 'Open Sans', sans-serif;
-            font-size: 1.2em;
+            font-size: 1.6em;
             font-weight: 300;
             height: 100vh;
         }
@@ -30,8 +30,8 @@
 
         #js {
             margin: 1em;
-            padding: 3em;
             height: 85vh;
+            position: relative;
         }
 
         #js ul {
@@ -64,6 +64,10 @@
             font-size: small;
             text-align: center;
             margin-bottom: 10px;
+        }
+
+        @media screen and (max-width: 625px){
+            body { font-size: 1.2em; }
         }
     </style>
 </head>
