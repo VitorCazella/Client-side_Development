@@ -5,7 +5,7 @@
     <title>Projects Hub</title>
     <meta charset="UTF-8" />
     <meta name="author" content="Vitor Antunes Cazella">
-    <link rel="stylesheet" type="text/css"  media="screen" href="debug.css">
+    <!-- <link rel="stylesheet" type="text/css"  media="screen" href="debug.css"> -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 
@@ -32,7 +32,7 @@
         }
 
         #js ul {
-            padding: 2em;
+            padding: 25px; margin: 0 30px;
             list-style: none;
         }
 
@@ -64,14 +64,18 @@
 
         @media screen and (max-width: 625px){
             body { font-size: 1.2em; }
+
+            #js ul li { max-width: 20em;}
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Pages Hub</h1><br><br><hr>
+        <h1>Pages Hub</h1>
     </header>
+
+    <hr>
 
     <div id="js"></div>
 
