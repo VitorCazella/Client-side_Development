@@ -12,11 +12,16 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-document.getElementById("btn1").addEventListener("click", displayDate);
-
-function displayDate() {
-  document.getElementById("root").innerHTML = App();
+function tick() {
+  const element = (
+    <div>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(element, document.getElementsByClassName("main"));
 }
+
+//setInterval(tick, 1000);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
