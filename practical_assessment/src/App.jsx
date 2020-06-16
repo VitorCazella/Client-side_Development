@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import logo from './logo.svg';
+import Shapes from './pages/Shapes.jsx';
 import './App.css';
 // import './debug.css';
 
@@ -9,30 +10,30 @@ class App extends React.Component {
     return (
       <div className="App">
       <header className="header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="logo" alt="logo" />
         <h1>{this.props.name} Page</h1>
       </header>
       
       <nav className="navbar">
         <ul>
           <li><a href="#" id="btn1">Home</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Calculator</a></li>
+          <li><a href="#">Shapes</a></li>
           <li><a href="#">About</a></li>
         </ul>
       </nav>
 
-      <div className="main"></div>
+    <div className="main">
+      <Shapes />
+    </div>
 
       <footer className="footer">
-        <div class="content">
-          &copy; Vitor A. Cazella
+        <div class="info">
+          <a title="copyright">&copy; Vitor A. Cazella</a>
           <a title="Privacy Policy" href="#">Privacy Policy</a>
           <a title="Terms of sevice" href="#">Terms of sevice</a>
         </div>
         <div>
-
-
           <a href="https://www.facebook.com/"><img
             className="social"
             src="https://www.androidcentral.com/sites/androidcentral.com/files/article_images/2019/10/facebook-logo-f.png?fbclid=IwAR0reKvacunXzHMJVmFkVzqtjEkrZ7TZufs3ZplPItsO_cO9pc34owH_vCk"
