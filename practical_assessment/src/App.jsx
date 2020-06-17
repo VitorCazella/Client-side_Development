@@ -1,31 +1,33 @@
-import React from 'react';
+import React, { useState } from "react";
 import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import Shapes from './pages/Shapes.jsx';
-import './App.css';
-// import './debug.css';
+import './style/App.css';
+import Time from './pages/Clock.jsx';
+import Calculator from './pages/Calculator.jsx';
+// import './style/debug.css';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
+var page = ['Main', 'Calculator', 'Shapes'];
+
+function App() {
+  const [page, setPage] = useState(<Calculator />);
+  return (
+    <div className="App">
       <header className="header">
         <img src={logo} className="logo" alt="logo" />
-        <h1>{this.props.name} Page</h1>
+        <h1>{page.name} Page</h1>
       </header>
-      
+
       <nav className="navbar">
         <ul>
-          <li><a href="#" id="btn1">Home</a></li>
-          <li><a href="#">Calculator</a></li>
-          <li><a href="#">Shapes</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#" className="menu-item" onClick={() => setPage(<Calculator />)}>Home</a></li>
+          <li><a href="#" className="menu-item" onClick={() => setPage(<Calculator />)}>Calculator</a></li>
+          <li><a href="#" className="menu-item" onClick={() => setPage(<Shapes />)}>Shapes</a></li>
+          <li><a href="#" className="menu-item" onClick={() => setPage(<Calculator />)}>About</a></li>
         </ul>
       </nav>
 
-    <div className="main">
-      <Shapes />
-    </div>
+      <div id="main" className="main">{page}</div>
 
       <footer className="footer">
         <div class="info">
@@ -39,7 +41,7 @@ class App extends React.Component {
             src="https://www.androidcentral.com/sites/androidcentral.com/files/article_images/2019/10/facebook-logo-f.png?fbclid=IwAR0reKvacunXzHMJVmFkVzqtjEkrZ7TZufs3ZplPItsO_cO9pc34owH_vCk"
             roundedCircle
           />
-        </a>
+          </a>
 
           <a href="https://twitter.com/" ><img
             className="social"
@@ -57,8 +59,7 @@ class App extends React.Component {
         </div>
       </footer>
     </div>
-    );
-  }
+  );
 }
 
 export default App;
