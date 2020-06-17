@@ -44,12 +44,16 @@ body{
   }
 }
 
+.time {
+  
+}
+
 .header {
   background-color: #57374f;
   min-height: 5vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
 }
