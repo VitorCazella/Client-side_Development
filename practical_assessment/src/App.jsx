@@ -1,30 +1,32 @@
 import React, { useState } from "react";
-import logo from './logo.svg';
-import Shapes from './pages/Shapes.jsx';
 import './style/App.css';
+import logo from './images/logo.svg';
+import ShapesList from './pages/Shapes.jsx';
 import Clock from './pages/Clock.jsx';
 import Footer from './pages/Footer.jsx';
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
 import Calculator from './pages/Calculator.jsx';
 // import './style/debug.css';
 
-var page = ['Main', 'Calculator', 'Shapes'];
+var pageName = "Home";
 
 function App() {
-  const [page, setPage] = useState(<Calculator />);
+  const [page, setPage] = useState(<Home name="Home" />);
   return (
     <div className="App">
       <header className="header">
         <img src={logo} className="logo" alt="logo" />
-        <h1>Page</h1>
+        <h1>{pageName} Page</h1>
         <Clock />
       </header>
 
       <nav className="navbar">
         <ul>
-          <li><a href="#" className="menu-item" onClick={() => setPage(<Calculator />)}>Home</a></li>
+          <li><a href="#" className="menu-item" onClick={() => setPage(<Home />) }>Home</a></li>
           <li><a href="#" className="menu-item" onClick={() => setPage(<Calculator />)}>Calculator</a></li>
-          <li><a href="#" className="menu-item" onClick={() => setPage(<Shapes />)}>Shapes</a></li>
-          <li><a href="#" className="menu-item" onClick={() => setPage(<Calculator />)}>About</a></li>
+          <li><a href="#" className="menu-item" onClick={() => setPage(<ShapesList />)}>Shapes</a></li>
+          <li><a href="#" className="menu-item" onClick={() => setPage(<About />)}>About</a></li>
         </ul>
       </nav>
 
@@ -34,5 +36,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

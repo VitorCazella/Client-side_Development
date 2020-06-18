@@ -44,10 +44,6 @@ body{
   }
 }
 
-.time {
-  
-}
-
 .header {
   background-color: #57374f;
   min-height: 5vh;
@@ -105,3 +101,22 @@ footer a { margin: 0.5em; }
   max-height: 3em;
   margin: 0.8em;
 }
+
+section.links { 
+  background-color: #eee9d9;
+  position: relative;
+}
+
+section.links aside {
+  width: 30%;
+  float: left;
+  margin-right: 10px;
+}
+
+section.links aside .content { padding: 30px 30px 20px 0;}
+
+section.links aside .content img { display: block; margin-bottom: 15px; width: 70%; }
+
+section.links aside .content h4 { margin-bottom: 0; }
+section.links aside .content p { margin-bottom: .5em; }
+section.links aside .content a { display: inline-block; color: #cc6633; font-weight: 700; }
