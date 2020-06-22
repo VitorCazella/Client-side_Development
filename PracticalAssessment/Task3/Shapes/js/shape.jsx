@@ -17,7 +17,7 @@ class Shape extends React.Component {
   render() {
     return (
       'div',
-      { },//{ onClick: () => this.setState({ liked: true }) },
+      { style},//{ onClick: () => this.setState({ liked: true }) },
       'Like'
     );
   }
