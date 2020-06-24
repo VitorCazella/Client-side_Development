@@ -9,15 +9,12 @@ import About from './pages/About.jsx';
 import Calculator from './pages/Calculator.jsx';
 // import './style/debug.css';
 
-var pageName = "Home";
-
 function App() {
   const [page, setPage] = useState(<Home name="Home" />);
   return (
     <div className="App">
       <header className="header">
         <img src={logo} className="logo" alt="logo" />
-        <h1>{pageName} Page</h1>
         <Clock />
       </header>
 
