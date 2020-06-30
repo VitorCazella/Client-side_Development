@@ -1,0 +1,10 @@
+System Design Document
+
+UI Design Document
+- Site map
+- wireframes (4 pages)
+- mock-ups (mobile, tablet, desktop)
+
+Summary of Project, i.e. what problem is being solved?
+
+Page names

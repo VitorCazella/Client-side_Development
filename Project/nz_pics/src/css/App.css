@@ -1,20 +1,15 @@
 .App {
   background-color:#fafafa;
-  min-height: 200vh;
+  height: 100vh;
 }
 
 .App-logo {
-  height: 10vmin;
+  height: 2em;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 header {
+  height: 10%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -23,21 +18,13 @@ header {
   color: black;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Side Bar */
 
 .sidebarLeft{
-  margin: 25vmin 4vmin;
+  width: 20%;
+  max-width: 200px;
+  padding: 15vmin 2em;
+  margin-top: 5%;
   float: left;
   position: fixed;
 }
@@ -46,8 +33,6 @@ header {
 list-style-type: none;
 margin: 0;
 padding: 0;
-width: 20vw;
-max-width: 200px;
 background-color: #f1f1f1;
 border: 1px solid #555;
 overflow: hidden;
@@ -74,8 +59,46 @@ background-color: #555;
 color: white;
 }
 
-@media screen and (max-width: 625px) {
+/* Main */
+
+.main {
+  display: block;
+  position: fixed;
+  right: 0;
+  justify-content: center;
+  margin: 5em 5% 0 30%;
+}
+
+/* Photo Box */
+
+.photobox {
+  background-color: rgb(218, 218, 218);
+  border-radius: 2%;
+ 
+  padding: 1.5em;
+  max-width: 1080px;
+}
+
+/* Footer */
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-size: .8em;
+  margin: 40px;
+  color: #999;
+}
+
+footer .content { display: inline; }
+
+footer a {
+  margin-left: 30px;
+  color: #777;
+}
+
+@media screen and (max-width: 760px) {
   .sidebarLeft li a{
-    font-size: .7em;
+    font-size: .8em;
   }
 }

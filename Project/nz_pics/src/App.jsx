@@ -4,6 +4,7 @@ import Main from './pages/Main.jsx';
 import Albuns from './pages/Albuns.jsx';
 import Footer from './Footer.jsx';
 import './css/App.css';
+// import './debug.css'
 
 var page = ['Main', 'Calculator', 'Shapes'];
 
