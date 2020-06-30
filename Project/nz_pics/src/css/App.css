@@ -9,13 +9,14 @@
 }
 
 header {
-  height: 10%;
   display: flex;
+  background-color: #d6d6d6;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: black;
+  border-bottom: solid .5px rgba(0, 0, 0, 0.555);
 }
 
 /* Side Bar */
@@ -66,7 +67,7 @@ color: white;
   position: fixed;
   right: 0;
   justify-content: center;
-  margin: 5em 5% 0 30%;
+  margin: 10% 5% 0 30%;
 }
 
 /* Photo Box */
@@ -74,8 +75,7 @@ color: white;
 .photobox {
   background-color: rgb(218, 218, 218);
   border-radius: 2%;
- 
-  padding: 1.5em;
+  padding: 3vw;
   max-width: 1080px;
 }
 
@@ -101,4 +101,24 @@ footer a {
   .sidebarLeft li a{
     font-size: .8em;
   }
+
+  .main {
+    display: block;
+    position: relative;
+    justify-content: center;
+    margin: 2em 1em;
+  }
+
+  .sidebarLeft{
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-top: 0;
+    float: none;
+    position: relative;
+  }
+
+  .sidebarLeft li a {
+    padding: .4em .2em;
+    }
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './Header.jsx';
 import Main from './pages/Main.jsx';
 import Albuns from './pages/Albuns.jsx';
+import NewPhotos from './pages/NewPhotos.jsx';
 import Footer from './Footer.jsx';
 import './css/App.css';
 // import './debug.css'
@@ -13,13 +14,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <hr />
       <section className="sidebarLeft">
         <ul>
           <li><a class="active" href="#" onClick={() => setPage(<Main />)}>Home</a></li>
           <li><a href="#" onClick={() => setPage(<Albuns />)}>Albums</a></li>
-          <li><a href="#" onClick={() => setPage(<Albuns />)}>New Photos</a></li>
-          <li><a href="#" onClick={() => setPage(<Main />)}>Photography</a></li>
+          <li><a href="#" onClick={() => setPage(<NewPhotos />)}>New Photos</a></li>
+          <li><a href="#" onClick={() => setPage(<NewPhotos />)}>Photography</a></li>
           <li><a href="#" onClick={() => setPage(<Albuns />)}>About</a></li>
         </ul>
       </section>
