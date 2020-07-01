@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './img/camera.png';
+import logo from '../img/camera.png';
 
 function Header() {
     return (
