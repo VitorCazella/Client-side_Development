@@ -1,4 +1,4 @@
-.App {
+#root {
   background-color:#fafafa;
 }
 
@@ -62,11 +62,7 @@ color: white;
 /* Main */
 
 .main {
-  display: block;
-  position: fixed;
-  right: 0;
-  justify-content: center;
-  margin: 10% 5% 0 30%;
+  margin: 30px 10% 0 25%;
 }
 
 /* Photo Box */
@@ -75,7 +71,7 @@ color: white;
   background-color: rgb(218, 218, 218);
   border-radius: 2%;
   padding: 3vw;
-  max-width: 1080px;
+  max-width: 1000px;
 }
 
 /* Footer */
