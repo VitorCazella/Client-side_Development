@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import Main from './pages/Main.jsx';
-import Albuns from './pages/Albuns.jsx';
+import { Container, Row, Col } from 'react-bootstrap';
+import Main from './pages/Home.jsx';
+import Albums from './pages/Albums.jsx';
 import NewPhotos from './pages/NewPhotos.jsx';
+import Photography from './pages/Photography.jsx';
+import About from './pages/About.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/App.css';
 // import '../css/debug.css';
@@ -10,7 +13,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: <Albuns />
+      page: <Main />
     }
   }
 
@@ -34,18 +37,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <section className="sidebarLeft">
-          <ul id="nav">
-            <li><a className="active" href="#" onClick={() => this.setSelected(<Main />)}>Home</a></li>
-            <li><a href="#" onClick={() => this.setSelected(<Albuns />)}>Albums</a></li>
-            <li><a href="#" onClick={() => this.setSelected(<NewPhotos />)}>New Photos</a></li>
-            <li><a href="#" onClick={() => this.setSelected(<Main />)}>Photography</a></li>
-            <li><a href="#" onClick={() => this.setSelected(<Main />)}>About</a></li>
-          </ul>
-        </section>
-        <div className="main">{this.state.page}</div>
-      </div>
+      <>
+        <div className="App overflow-auto">
+          <section className="sidebarLeft">
+            <ul id="nav">
+              <li><a className="active" href="#" onClick={() => this.setSelected(<Main />)}>Home</a></li>
+              <li><a href="#" onClick={() => this.setSelected(<Albums />)}>Albums</a></li>
+              <li><a href="#" onClick={() => this.setSelected(<NewPhotos />)}>New Photos</a></li>
+              <li><a href="#" onClick={() => this.setSelected(<Photography />)}>Photography</a></li>
+              <li><a href="#" onClick={() => this.setSelected(<About />)}>About</a></li>
+            </ul>
+          </section>
+          <div className="main">{this.state.page}</div>
+        </div>
+      </>
     );
   }
 }

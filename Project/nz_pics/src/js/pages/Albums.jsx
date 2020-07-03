@@ -9,7 +9,7 @@ function Albuns() {
         <div>	
             <h2>Cities</h2>
             <Container className="d-md-flex" className="overflow-auto">
-                <Row style={{ width: '1000px'}}>
+                <Row style={{ width: '1000px', height: '300px'}}>
                     <Col>
                         <Card>
                             <Card.Img variant="top" src={Wellington} />
