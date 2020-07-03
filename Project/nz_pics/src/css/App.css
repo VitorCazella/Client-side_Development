@@ -1,5 +1,32 @@
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e9e9e9;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #root {
   background-color:#fafafa;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -7,9 +34,12 @@
   pointer-events: none;
 }
 
-header {
+/* Header */
+
+.header {
+  height: 10vh;
   display: flex;
-  background-color: #d6d6d6;
+  background-color: #e9e9e9;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
@@ -22,11 +52,9 @@ header {
 
 .sidebarLeft{
   width: 20%;
-  max-width: 200px;
-  padding: 15vmin 2em;
-  margin-top: 5%;
+  min-height: 100vh;
   float: left;
-  position: fixed;
+  padding: 15em 2em;
 }
 
 .sidebarLeft ul {
@@ -59,27 +87,40 @@ background-color: #555;
 color: white;
 }
 
+.sidebarLeft:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* Main */
 
 .main {
-  margin: 30px 10% 0 25%;
+  float: right;
+  width: 80%;
+  min-height: 100vh;
+  padding: 4em 1em;
 }
 
 /* Photo Box */
 
 .photobox {
-  background-color: rgb(218, 218, 218);
-  border-radius: 2%;
-  padding: 3vw;
-  max-width: 1000px;
+  background-color: #fafafa;
+  box-shadow: 1px 3px 15px;
+  padding: 25px;
+  max-width: 1080px;
+}
+
+.sm-photobox {
+  background-color: #fafafa;
+  box-shadow: 1px 3px 15px;
+  padding: 25px;
+  max-width: 720px;
 }
 
 /* Footer */
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   font-size: .8em;
   margin: 40px;
   color: #999;
@@ -92,21 +133,27 @@ footer a {
   color: #777;
 }
 
-@media screen and (max-width: 760px) {
-  .sidebarLeft li a{
-    font-size: .8em;
+@media screen and (max-width: 1000px) {
+  .sidebarLeft li a {
+    font-size: .9em;
   }
+}
 
+@media screen and (max-width: 900px) {
   .main {
+    width: 100%;
+    min-height: 50vh;
     display: block;
+    float: none;
     position: relative;
     justify-content: center;
-    margin: 2em 1em;
+    margin: 2em auto;
   }
 
   .sidebarLeft{
+    display: block;
     width: 100%;
-    max-width: 100%;
+    min-height: 0;
     padding: 0;
     margin-top: 0;
     float: none;
