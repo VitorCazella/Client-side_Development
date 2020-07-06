@@ -1,7 +1,7 @@
-#Client-Side Development Project
+# Client-Side Development Project
 Project name New Zealand Pictures, was created for the course of Software Development, subject Client-side Development, with the purpose of displaying skills acquired during web development learning (Responsive webpages, interaction with JavaScript and use of the React library).
 
-##Instructions
+## Instructions
 
 
 Install Bootstrap:
