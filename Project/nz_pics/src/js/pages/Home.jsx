@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel, Container } from 'react-bootstrap';
-import Img1 from '../../img/wellington/owhiro_vitor.jpg';
+import Img1 from '../../img/queenstown/MilfordSound.jpeg';
 import Img2 from '../../img/wellington/mountvic_vitor.jpg';
 import Img3 from '../../img/taupo/hukaFalls.jpeg';
 
@@ -18,8 +18,8 @@ class Home extends React.Component {
                                 alt="First slide"
                             />
                             <Carousel.Caption>
-                                <h3>Owhiro, wellington</h3>
-                                <p>Vitor Cazella</p>
+                                <h3>MilfordSound, Queenstown</h3>
+                                <p>Yasmin Melech</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
@@ -41,7 +41,7 @@ class Home extends React.Component {
                             />
                             <Carousel.Caption>
                                 <h3>HukaFalls, Taupo</h3>
-                                <p>Yasmin</p>
+                                <p>Yasmin Melech</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>

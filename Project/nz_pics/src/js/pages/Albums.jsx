@@ -2,7 +2,8 @@ import React from 'react';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap';
 import Wellington from '../../img/wellington/wellington-cable-car.jpg';
 import Auckland from '../../img/auckland/auckland-city.jpg';
-import Queenstown from '../../img/queenstown/queenstown-post.jpeg'
+import Queenstown from '../../img/queenstown/queenstown-post.jpeg';
+import Author from '../../img/camera.png';
 
 function Albuns() {
     return (
@@ -54,7 +55,7 @@ function Albuns() {
                 <Row>
                     <Col>
                         <Card>
-                            <Card.Img variant="top" src={Wellington} />
+                            <Card.Img variant="top" src={Author} />
                             <Card.Body>
                                 <Card.Title>Vitor Cazella</Card.Title>
                                 <Button variant="primary">See album</Button>
@@ -63,7 +64,7 @@ function Albuns() {
                     </Col>
                     <Col>
                         <Card>
-                            <Card.Img variant="top" src={Auckland} />
+                            <Card.Img variant="top" src={Author} />
                             <Card.Body>
                                 <Card.Title>Yasmin</Card.Title>
                                 <Button variant="primary">See album</Button>

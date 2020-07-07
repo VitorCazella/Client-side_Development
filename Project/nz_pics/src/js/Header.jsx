@@ -5,10 +5,6 @@ import { Container, Image, Row, Col } from 'react-bootstrap';
 function Header() {
     return (
         <>
-            {/* <div className="header">
-                <img src={logo} className="App-logo Animated" alt="logo" />
-                <h3>New Zealand Pics</h3>
-            </div> */}
             <Container fluid>
                 <Row className="p-2 header align-middle">
                     <Col>

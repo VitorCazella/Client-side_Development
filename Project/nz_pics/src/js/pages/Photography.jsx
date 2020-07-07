@@ -1,8 +1,6 @@
 import React from 'react';
-import { Container, Image, Row, Col, ResponsiveEmbed, Button } from 'react-bootstrap';
-import Img1 from '../../img/photographer.jpg';
-import Img2 from '../../img/wellington/mountvic_vitor.jpg';
-import Img3 from '../../img/taupo/hukaFalls.jpeg';
+import { Container, Image, Row, Col, ResponsiveEmbed } from 'react-bootstrap';
+import Img from '../../img/photographer.jpg';
 
 function Photography() {
     return (
@@ -19,7 +17,7 @@ function Photography() {
 						material such as photographic film.</p>
                     </Col>
                     <Col>
-                        <Image src={Img1} width='100%' rounded />
+                        <Image src={Img} width='100%' rounded />
                     </Col>
                 </Row>
                 <br></br>
